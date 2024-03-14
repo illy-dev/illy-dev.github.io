@@ -34,6 +34,10 @@ section {
     transition: opacity 500ms ease;
 }
 
+.interactable {
+    
+}
+
 body:hover > #trailer {
     opacity: 1;
 }
