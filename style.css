@@ -29,13 +29,13 @@ section {
     top: 0px;
     z-index: 10000;
 
-    pointer-events: none;
     opacity: 0;
     transition: opacity 500ms ease;
+    pointer-events: none !important;
 }
 
 .interactable {
-    
+
 }
 
 body:hover > #trailer {
@@ -126,6 +126,12 @@ body:hover > #trailer {
 .wrapper .youtube:hover .tooltip,
 .wrapper .youtube:hover .tooltip:before{
     background: #DE463B;
+}
+
+.wrapper .spotify:hover span,
+.wrapper .spotify:hover .tooltip,
+.wrapper .spotify:hover .tooltip:before{
+    background: #1db954;
 }
 
 /* Animation Class */
