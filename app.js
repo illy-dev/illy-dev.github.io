@@ -1,6 +1,6 @@
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry)
+        //console.log(entry)
         if (entry.isIntersecting) {
             entry.target.classList.add('show');            
         } else {
@@ -16,8 +16,27 @@ hiddenElements.forEach((el) => observer.observe(el));
 const trailer = document.getElementById("trailer");
 
 window.onmousemove = e => {
-    const x = e.clientX - trailer.offsetWidth / 2;
-    const y = e.clientY - trailer.offsetHeight / 2;
+    const cursorWidth = trailer.offsetWidth;
+    const cursorHeight = trailer.offsetHeight;
+    const x = e.clientX;
+    const y = e.clientY;
+    const interactable = e.target.closest(".interactable");
+    const interacting = interactable !== null;
 
-    trailer.style.transform = `translate(${x}px, ${y}px)`;
+    trailer.style.left = `${x - cursorWidth / 2}px`;
+    trailer.style.top = `${y - cursorHeight / 2}px`;
+
+    changeScale(interacting);
+}
+
+const changeScale = (interacting) => {
+
+    const keyframes = {
+        transform: `scale(${interacting ? 2 : 1})`
+    }
+
+    trailer.animate(keyframes, {
+        duration: 800,
+        fill: "forwards"
+    });
 }
