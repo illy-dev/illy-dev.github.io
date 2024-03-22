@@ -18,6 +18,28 @@ section {
     font-size: 20px;
 }
 
+.text-effect1 {
+    color: white;
+}
+
+.gradient {
+    background: linear-gradient(to bottom,  #00c9ff 0%,#92fe9d 100%);
+    background-clip: text;
+    color: transparent;
+    background-size: 300%;
+    background-position: left;
+    animation: bg-animation 3s infinite alternate;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
 #trailer {
     height: 20px;
     width: 20px;
