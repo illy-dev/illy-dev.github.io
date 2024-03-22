@@ -41,3 +41,8 @@ const changeScale = (interacting) => {
     });
 }
 
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+document.getElementsByClassName('text-effect1').onmouseover = event => {
+    event.target.innerText = Math.random();
+}
