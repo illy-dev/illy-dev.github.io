@@ -42,6 +42,12 @@ body:hover > #trailer {
     opacity: 1;
 }
 
+.gradient {
+    background: linear-gradient(to bottom,  #00c9ff 0%,#92fe9d 100%);
+    background-clip: text;
+    color: transparent;
+}
+
 /* Social Media Icons */
  .wrapper {
     display: inline-flex;
