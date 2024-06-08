@@ -6,7 +6,7 @@ export default function Projects() {
         <Navbar />
 
         <div className="flex flex-col pl-10">
-            <h3 className="pt-10 pb-3">This Page is in progress 🔧👷‍♂️</h3>
+            <h3 className="pt-10 pb-3">Currently only this Website</h3>
         </div>
         </>
     );
