@@ -23,7 +23,7 @@
   h2 {font-size: 3.158rem; /* 50.56px */}
   
   h3 {font-size: 2.369rem; /* 37.92px */}
-  
+
   h4 {font-size: 1.777rem; /* 28.48px */}
   
   h5 {font-size: 1.333rem; /* 21.28px */}
@@ -33,9 +33,9 @@
 
 @layer components {
   .head-animation {
-  white-space: nowrap; 
-  margin: 0 auto;
-  @apply animate-typing
+    white-space: nowrap; 
+    margin: 0 auto;
+    @apply animate-typing
   }
   .navbar-styles {
     display: block;
@@ -43,5 +43,8 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+  }
+  .projects-styles {
+    @apply flex flex-col justify-center items-center border-white border min-h-20 min-w-16 rounded-lg mb-14 hover:shadow-lg hover:shadow-white hover:scale-110 hover:transition hover:transform hover:delay-200
   }
 }

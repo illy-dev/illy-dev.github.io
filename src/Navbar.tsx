@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
     return(
-        <div className="sticky">
+        <div className="sticky top-0 bg-black">
             <ul className=" list-none m-0 p-0 overflow-hidden">
                 <li className=" float-left navbar-styles"><Link to={`/`} className="navbar-styles hover:head-animation overflow-hidden">illy is a dev</Link></li>
                 <li className=" float-right navbar-styles"><Link to={`/how`} className="navbar-styles hover:animate-bounce">How?</Link></li>
