@@ -1,4 +1,8 @@
 import Navbar from "../Navbar";
+// images
+import discord_bot from "../assets/discord_bot.png";
+import fastfetch_config from "../assets/fastfetch_config.png";
+import free_game_cli from "../assets/free_games_cli.png";
 
 export default function Projects() {
     return(
@@ -16,19 +20,19 @@ export default function Projects() {
 			<p className="pb-2">My Personal Website</p>
 		</div>
 		<div className="projects-styles">
-			<img src="../assets/discord_bot.png" className="max-w-[25rem] m-5" alt="discord bot" />
+			<img src={discord_bot} className="max-w-[25rem] m-5" alt="discord bot" />
 			<h4>Simple Discord Bot <a href="https://github.com/illy-dev/simple-discord-bot">🔗</a></h4>
 			<p className="pb-2">Discord Bot with fun commands</p>
 		</div>
 
 		<div className="projects-styles">
-			<img src="../assets/fastfetch_config.png" className="max-w-[25rem] m-5" alt="fastfetch config" />
+			<img src={fastfetch_config} className="max-w-[25rem] m-5" alt="fastfetch config" />
 			<h4>Fastfetch config <a href="https://github.com/illy-dev/fastfetch-config">🔗</a></h4>
 			<p className="pb-2">Beautiful configuration for the fastfetch-cli</p>
 		</div>
 
 		<div className="projects-styles">
-			<img src="../assets/free_games_cli.png" className="max-w-[25rem] m-5" alt="free games cli" />
+			<img src={free_game_cli} className="max-w-[25rem] m-5" alt="free games cli" />
 			<h4>free-game-cli <a href="https://github.com/illy-dev/free-game-cli">🔗</a></h4>
 			<p className="pb-2">Cli to find out which free2play game to play</p>
 		</div>
