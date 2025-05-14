@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0f0e0e;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f0e0e;
+    --foreground: #ededed;
+  }
+}
+
+.category-anim {
+  position: relative;
+  color: #FFFF;
+  text-decoration: none;
+}
+
+.category-anim:hover {
+  color: #FFFF;
+}
+
+.category-anim::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFFF;
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+}
+
+.category-anim:hover::before {
+  transform: scaleX(1);
+}
+
+.imageGallery {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.1s ease-out;
+}
+
+.card {
+  height: 500px;
+  transition: transform 0.1s ease-out;
+  overflow: hidden;
+}
+
+
+@layer base {
+@font-face {
+  font-family: 'Switzer-Thin';
+  src: url('../../public/fonts/Switzer-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Switzer-ThinItalic';
+  src: url('../../public/fonts/Switzer-ThinItalic.woff2') format('woff2');
+  font-weight: 100;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Switzer-Extralight';
+  src: url('../../public/fonts/Switzer-Extralight.woff2') format('woff2');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Switzer-ExtralightItalic';
+  src: url('../../public/fonts/Switzer-ExtralightItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Switzer-Light';
+  src: url('../../public/fonts/Switzer-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Switzer-LightItalic';
+  src: url('../../public/fonts/Switzer-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Switzer-Regular';
+  src: url('../../public/fonts/Switzer-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Switzer-Italic';
+  src: url('../../public/fonts/Switzer-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Switzer-Medium';
+  src: url('../../public/fonts/Switzer-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Switzer-MediumItalic';
+  src: url('../../public/fonts/Switzer-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Switzer-Semibold';
+  src: url('../../public/fonts/Switzer-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Switzer-SemiboldItalic';
+  src: url('../../public/fonts/Switzer-SemiboldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Switzer-Bold';
+  src: url('../../public/fonts/Switzer-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Switzer-BoldItalic';
+  src: url('../../public/fonts/Switzer-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Switzer-Extrabold';
+  src: url('../../public/fonts/Switzer-Extrabold.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Switzer-ExtraboldItalic';
+  src: url('../../public/fonts/Switzer-ExtraboldItalic.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Switzer-Black';
+  src: url('../../public/fonts/Switzer-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Switzer-BlackItalic';
+  src: url('../../public/fonts/Switzer-BlackItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+  font-style: italic;
+}
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
