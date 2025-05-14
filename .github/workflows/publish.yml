@@ -32,8 +32,6 @@ jobs:
       - name: Build with Next.js 🏗️
         run: npm run build
 
-      - name: Export the site to static files 📦
-        run: npx next export
 
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
