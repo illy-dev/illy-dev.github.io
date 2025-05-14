@@ -1,11 +1,8 @@
-import type { NextConfig } from 'next'
- 
+import type { NextConfig } from 'next';
+
 const nextConfig: NextConfig = {
-  images: {
-    unoptimized: true,
-  },
   output: 'export',
-  distDir: 'out',
-}
- 
-export default nextConfig
+  basePath: process.env.PAGES_BASE_PATH,
+};
+
+export default nextConfig;
